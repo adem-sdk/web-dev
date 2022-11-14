@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Document sans titre</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=f9JpoJ7esiGJZi-oBCBRa4Y4da__7_tMJudyFwiRXxmYLBRHMT-pV0GR6sz1LfUmIbhRU8RZz4ep2RmxxZm6BoyS9t9bbVPNWSNQmJcQJzsfAFKMAwRzNH_dWgfgyX_sHWCvVotViIt3oOsAKxOgFW8lmd4ldCC5ovmmu3NXit_bc2OVpUk18wjlk4rQg9c-iZMNaT_bjAAIx8mC2iQAicLC-HsmvysVXqpHi6jxbs2MKj8DF4qoY6cS-E5IpuoAJWVemplhgLUUYUy1y_RHamw5gce_eE0cJvI5ctZ_FydIGTg8cm6-dfv9Z-zvtdFO6MF3oFRMDCaNPWVQKel6h6B0gNxrkgw_7vwRqQMi8KNSfj-s7Ntxt9ElMpA49sCVsQZ67mtFeyAQt45jyQGCDKfTPfc5ynJQTp0asBE6LwurrjKravfWZNfVnskQQ2jLwENs4eYdbnlZN84yLgJYrM_hoQqWlqIKgVPasnhx6gwrr9UrXqN2GE0eBZSq_ndhs0h4dackbKdk0IqsnE5ccsNFFejNcKYHRJxwx3ZQFUBCIVrYUBgOTAHc0YJHkfBgmiKikiayiG4zdiXGQcI8bv_llk3_5X7YsJ1n3k9WVAF10PUk4H3qokHuoZ4-QpH5KICm5_hWGcJsvSONzAotGVCnHk7LdcjwIJuMKp_yEdaI_pECKUvwnEd0Mq8tjlQ8X9mqLCUzxqxA1C6CPzy5MWmpqPh-dHBcp7VRvMjAM_TOV2aeMZ1J7j-kShnCCPYz1RAl4B8GWgqFXlIcINEesXuvtIPs1vC64H7opsL0qKMD11x563kHdZf_IYThBSPj_2ycZmhuz3MzioHU_VQiAA3ZLMmRyj7Io1E7m8SWLCXO4bRF-md0FBV-uTz36i7KI28SQDq3-lHIK6AB6OwPN-WRlW9iXqhJB1wcDn9EeVu2NrPH9ioMmJ9fXPch5Tya5FlfyvCr3rpGqVjDowe4i-kNJ8xRUBhWDU6GPDswsDt_3FO1DpyUSw5vYzKtNkt9pZsBfvSHHB_1_vOFsjVby5v39XsHIgJBWcP7_YDLPTPDozG9aA_v2XOjjsMX1sM3eAExHyUm10VpoyPLatqsp6j-2mKdGbER__5uTh0PeNjCQbocJIFac6lOQ5oOxLrvQgf9DwNDOabDaHqZXYz0bDn9LwWR184_a9O_OuOfb-WmetFEaxRlUbfFbC-hZhVsa67iWT_hxyB_5xXCGwV1Q1muv0BEkjafljh7bIq-gS--6XZGajEEFFCpnQ_l8XvgtQ3Aj1C89uxaJlX2EeHto94_AnAZmKYFI5L1fTreJ3sfizkbSLmI6QUsEpuITsDv6SVcbWujxUobaISSh3p7t2RjGgNWu_eglN5cyMrHyA-3dQ_wh2j_HP2pWMkVX9uI6kjTV2QLGliBdBUtft_SOZC7bzdNV5w7qe6KeMi9AbkeUTQ_qXIJOrylv1-0S4G3qumKeUIxS53_uAGWmT27cH05hTzdiEU2TUXdt9cixPCyif0Iwat7y_OLC1Tpo-ZPBCMHGiHW1ruWjnjRm4nsTsFlh-rT5dD0yhjd8K4VVM6fY9eQOytFCO7iNY8TnE5zQGk5LEovpLSSQ7SEDwlhHKfY38LrvSONJQIIy88Dffo" nonce="c9ac197ff6074d4b2f69db66c4651cfa" charset="UTF-8"></script></head>
+
+<body>
+<h4><a name="tab_inst" id="tab_inst"></a>Table des instructions</h4>
+<p>Il s'agit de la liste des instructions qui peuvent être exécutées sur la machine pédagogique. L'utilisateur ne doit pas utiliser un nom d'instruction qui ne figure pas sur cette liste.</p>
+<p><strong>Notations: </strong></p>
+<ul>
+  <li>X : c'est une adresse quelconque en mémoire centrale (comprise entre 800 et 999).</li>
+  <li>[ &alpha; ] : Contenu de &alpha; (&alpha; peut être une adresse ou un registre)</li>
+  <li>(*) : signifie Mode d'adressage (voir plus bas).</li>
+</ul>
+<table cellspacing="0" cellpadding="4" border="1" align="center">
+  <tbody>
+    <tr>
+      <th> </th>
+      <th>Instruction </th>
+      <th>(*)</th>
+      <th>Signification</th>
+    </tr>
+    <tr>
+      <td rowspan="4">0</td>
+      <td rowspan="4">LOAD X, (*) </td>
+      <td>D</td>
+      <td>Acc ← [X]</td>
+    </tr>
+    <tr>
+      <td>IND</td>
+      <td>Acc ← [[X]]</td>
+    </tr>
+    <tr>
+      <td>IMM</td>
+      <td>Acc ← X</td>
+    </tr>
+    <tr>
+      <td>XRi</td>
+      <td>Acc ← [ X + [XRi] ]</td>
+    </tr>
+    <tr>
+      <td rowspan="4">1</td>
+      <td rowspan="4">STORE X, (*) </td>
+      <td>D</td>
+      <td>@X ← [Acc] </td>
+    </tr>
+    <tr>
+      <td>IND</td>
+      <td>@[X] ← [Acc] </td>
+    </tr>
+    <tr>
+      <td>IMM</td>
+      <td>Interdit</td>
+    </tr>
+    <tr>
+      <td>XRi</td>
+      <td>@[X + [XRi] ] ← [Acc] </td>
+    </tr>
+    <tr>
+      <td rowspan="4">2</td>
+      <td rowspan="4">ADD X, (*) </td>
+      <td>D</td>
+      <td>Acc ← [Acc] + [X] </td>
+    </tr>
+    <tr>
+      <td>IND</td>
+      <td>Acc ← [Acc] + [ [X] ]</td>
+    </tr>
+    <tr>
+      <td>IMM</td>
+      <td>Acc ← [Acc] + X</td>
+    </tr>
+    <tr>
+      <td>XRi</td>
+      <td>Acc ← [Acc] + [ X + [XRi] ] </td>
+    </tr>
+    <tr>
+      <td rowspan="4">3</td>
+      <td rowspan="4">SUB X, (*) </td>
+      <td>D</td>
+      <td>Acc ← [Acc] - [X] </td>
+    </tr>
+    <tr>
+      <td>IND</td>
+      <td>Acc ← [Acc] - [ [X] ]</td>
+    </tr>
+    <tr>
+      <td>IMM</td>
+      <td>Acc ← [Acc] - X</td>
+    </tr>
+    <tr>
+      <td>XRi</td>
+      <td>Acc ← [Acc] - [ X + [XRi] ] </td>
+    </tr>
+    <tr>
+      <td rowspan="4">4</td>
+      <td rowspan="4">MUL X, (*) </td>
+      <td>D</td>
+      <td>Acc ← [Acc] * [X] </td>
+    </tr>
+    <tr>
+      <td>IND</td>
+      <td>Acc ← [Acc] * [ [X] ]</td>
+    </tr>
+    <tr>
+      <td>IMM</td>
+      <td>Acc ← [Acc] * X</td>
+    </tr>
+    <tr>
+      <td>XRi</td>
+      <td>Acc ← [Acc] * [ X + [XRi] ] </td>
+    </tr>
+    <tr>
+      <td rowspan="4">5</td>
+      <td rowspan="4">DIV X, (*) </td>
+      <td>D</td>
+      <td>Acc ← [Acc] / [X] </td>
+    </tr>
+    <tr>
+      <td>IND</td>
+      <td>Acc ← [Acc] / [ [X] ]</td>
+    </tr>
+    <tr>
+      <td>IMM</td>
+      <td>Acc ← [Acc] / X</td>
+    </tr>
+    <tr>
+      <td>XRi</td>
+      <td>Acc ← [Acc] / [ X + [XRi] ] </td>
+    </tr>
+    <tr>
+      <td rowspan="4">6</td>
+      <td rowspan="4">AND X, (*) </td>
+      <td>D</td>
+      <td>Acc ← [Acc] and [X] </td>
+    </tr>
+    <tr>
+      <td>IND</td>
+      <td>Acc ← [Acc] and [ [X] ]</td>
+    </tr>
+    <tr>
+      <td>IMM</td>
+      <td>Acc ← [Acc] and X</td>
+    </tr>
+    <tr>
+      <td>XRi</td>
+      <td>Acc ← [Acc] and [ X + [XRi] ] </td>
+    </tr>
+    <tr>
+      <td rowspan="4">7</td>
+      <td rowspan="4">OR X, (*) </td>
+      <td>D</td>
+      <td>Acc ← [Acc] or [X] </td>
+    </tr>
+    <tr>
+      <td>IND</td>
+      <td>Acc ← [Acc] or [ [X] ]</td>
+    </tr>
+    <tr>
+      <td>IMM</td>
+      <td>Acc ← [Acc] or X</td>
+    </tr>
+    <tr>
+      <td>XRi</td>
+      <td>Acc ← [Acc] or [ X + [XRi] ] </td>
+    </tr>
+    <tr>
+      <td rowspan="4">8</td>
+      <td rowspan="4">NOT X, (*) </td>
+      <td>D</td>
+      <td>Acc ← not [X] </td>
+    </tr>
+    <tr>
+      <td>IND</td>
+      <td>Acc ← not [ [X] ]</td>
+    </tr>
+    <tr>
+      <td>IMM</td>
+      <td>Acc ← not X</td>
+    </tr>
+    <tr>
+      <td>XRi</td>
+      <td>Acc ← not [ X + [XRi] ] </td>
+    </tr>
+    <tr>
+      <td rowspan="4">9</td>
+      <td rowspan="4">JMP X, (*) </td>
+      <td>D</td>
+      <td>MAR ← [X] </td>
+    </tr>
+    <tr>
+      <td>IND</td>
+      <td>MAR ← [ [X] ]</td>
+    </tr>
+    <tr>
+      <td>IMM</td>
+      <td>MAR ← X</td>
+    </tr>
+    <tr>
+      <td>XRi</td>
+      <td>MAR ← [ X + [XRi] ] </td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>JE </td>
+      <td>&nbsp;</td>
+      <td>CO ← [CO] +1  si [Acc] = 0 </td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>JG </td>
+      <td>&nbsp;</td>
+      <td>CO ← [CO] +1 si [Acc] &gt; 0 </td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>JL </td>
+      <td>&nbsp;</td>
+      <td>CO ← [CO] +1  si [Acc] &lt; 0 </td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>MOVE XRi</td>
+      <td>&nbsp;</td>
+      <td>XRi ← [ ACC ]</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>READ </td>
+      <td>&nbsp;</td>
+      <td> Acc  ← [ Clavier ]</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>WRITE </td>
+      <td>&nbsp;</td>
+      <td>Ecran ← [ Acc ] </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
